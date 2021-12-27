@@ -20,24 +20,8 @@
                     <i-col span="3">
                         <Affix :offset-top="75">
                             <div class="catalogue" v-if="list.length">
-                                <!--<card dis-hover>-->
-                                    <!--<div class="catalogue-title">-->
-                                        <!--<template v-if="lang === 'zh-CN'">目录</template>-->
-                                        <!--<template v-else>Catalogue</template>-->
-                                    <!--</div>-->
-                                    <!--<div class="catalogue-content">-->
-                                        <!--<ul>-->
-                                            <!--<li v-for="item in list">-->
-                                                <!--<a :href="'#' + item.path" @click.stop.prevent="handleClickLink(item.path)">{{ item.title }}</a>-->
-                                            <!--</li>-->
-                                            <!--<li v-if="need_api">-->
-                                                <!--<a href="#API" @click.stop.prevent="handleClickLink('API')">API</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                <!--</card>-->
                                 <Anchor show-ink>
-                                    <AnchorLink v-for="item in list" :key="item.path" :href="'#' + item.path" :title="item.title" />
+                                    <AnchorLink v-for="(item, index) in list" :key="index" :href="'#' + item.path" :title="item.title" />
                                     <AnchorLink :scroll-offset="140" href="#API" title="API" v-if="need_api" />
                                 </Anchor>
                             </div>
@@ -53,170 +37,11 @@
                 </Row>
             </div>
         </div>
-        <div class="footer">
-            <div class="footer-main">
-                <Row>
-                    <i-col span="5">
-                        <h4>
-                            <Icon type="logo-github"></Icon>
-                            GitHub
-                        </h4>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/iview/iview" target="_blank">iView</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iview/iview-cli" target="_blank">iView Cli</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iview/iview-admin" target="_blank">iView Admin</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iview/iview-doc" target="_blank">iView Doc</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iview/iview-project" target="_blank">iView Project</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iview/vue-cli-plugin-iview" target="_blank">iView Plugin</a>
-                            </li>
-                        </ul>
-                    </i-col>
-                    <i-col span="5">
-                        <h4>
-                            <Icon type="ios-link"></Icon>
-                            {{ $t('index.links') }}
-                        </h4>
-                        <ul>
-                            <li>
-                                <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - {{ $t('index.td') }}
-                            </li>
-                            <li>
-                                <a href="http://mi.talkingdata.com/" target="_blank">Marketing Intelligence</a> - {{ $t('index.td_mi') }}
-                            </li>
-                            <li>
-                                <a href="https://github.com/TalkingData/inmap/" target="_blank">inMap</a> - {{ $t('index.inmap') }}
-                            </li>
-                            <li>
-                                <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - {{ $t('index.Fregata') }}
-                            </li>
-                            <li>
-                                <a href="https://github.com/TalkingData/Myna" target="_blank">Myna</a> - {{ $t('index.Myna') }}
-                            </li>
-                            <li>
-                                <a href="https://github.com/TalkingData/owl" target="_blank">OWL</a> - {{ $t('index.OWL') }}
-                            </li>
-                        </ul>
-                    </i-col>
-                    <i-col span="5" offset="2">
-                        <h4>
-                            <Icon type="ios-chatbubbles"></Icon>
-                            {{ $t('index.community') }}
-                        </h4>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/iview/iview/issues" target="_blank">{{ $t('index.feedback') }}</a>
-                            </li>
-                            <li>
-                                <a href="https://www.iviewui.com/new-issue" target="_blank">{{ $t('index.bug') }}</a>
-                            </li>
-                            <li>
-                                <a href="https://gitter.im/iview/iview" target="_blank">{{ $t('index.chat') }}</a>
-                            </li>
-                            <li>
-                                <a href="https://segmentfault.com/t/iview" target="_blank">SegmentFault</a>
-                            </li>
-                        </ul>
-                    </i-col>
-                    <i-col span="5" offset="2">
-                        <div class="footer-aside">
-                            <div class="footer-logo">
-                                <img src="../images/logo.png">
-                            </div>
-                            <div class="footer-author">
-                                <a href="https://www.maoyun.tv/?ref=iview" target="_blank">
-                                    <img src="../images/logo-maoyun.png">
-                                </a>
-                            </div>
-                            <div class="footer-version">
-                                <!--<p>{{ $t('index.current_version') }}</p>-->
-                                <p>提供 CDN 赞助</p>
-                            </div>
-                        </div>
-                    </i-col>
-                </Row>
-            </div>
-        </div>
-        <!--<Modal v-model="donate" v-if="lang === 'zh-CN'" title="支持 iView 的开发" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">-->
-            <!--<div class="ivu-article">-->
-                <!--<p>iView 是采用 MIT 许可的开源项目，您可以在个人或企业项目中免费使用。不过，如果您觉得 iView 对您的项目带来了帮助，提高开发效率，可以用捐助来表示您的谢意：)</p>-->
-                <!--<p>您可以用公司的名义进行赞助，赞助信息将在文档页展示。联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>-->
-                <!--<h3>个人可使用 微信 或 支付宝 捐助：</h3>-->
-                <!--<div>-->
-                    <!--<img src="../images/pay.png" style="width: 100%">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</Modal>-->
-        <Modal v-model="donate" title="成为 iView 赞助商" @on-ok="handleModalClose" @on-cancel="handleModalClose" width="600" class-name="vertical-center-modal">
-            <div class="ivu-article">
-                <p>如果您有品牌推广、活动推广、招聘推广、社区合作的需求，欢迎联系我们。</p>
-                <p>联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a> 咨询。</p>
-                <p>位置如下图所示：</p>
-                <div>
-                    <Carousel v-if="donate" v-model="adCarousel" autoplay :autoplay-speed="5000" dots="outside">
-                        <CarouselItem>
-                            <div class="demo-carousel" style="height: 300px">
-                                <img src="../images/ad-demo1.png" style="width: 100%">
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div class="demo-carousel" style="height: 300px;">
-                                <img src="../images/ad-demo3.png" style="width: 100%">
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div class="demo-carousel" style="height: 300px;">
-                                <img src="../images/ad-demo2.png" style="width: 100%">
-                            </div>
-                        </CarouselItem>
-                    </Carousel>
-                </div>
-            </div>
-        </Modal>
-        <!--<Modal v-model="donate" v-if="lang !== 'zh-CN'" title="Donate iView project" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">-->
-            <!--<div class="ivu-article">-->
-                <!--<p>iView is an open source project with MIT licenses that you can use for free in your personal or business projects. However, if you feel that iView has helped your project to improve development efficiency, you can use donations to express your gratitude: )</p>-->
-                <!--<h3>Use Wechat or Alipay to donate：</h3>-->
-                <!--<div>-->
-                    <!--<img src="../images/pay.png" style="width: 100%">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</Modal>-->
-        <Modal v-model="ask" title="免费加入 iView 官方QQ群参与讨论" class-name="vertical-center-modal">
-            <div class="ivu-article">
-                <p>免费加入官方QQ讨论群，交流 iView 技术问题。</p>
-                <p>群号：<strong>71434987</strong></p>
-                <p>二维码：</p>
-                <p>
-                    <img src="../images/qqgroup3.png" style="display: block;width: 50%;margin: 0 auto;">
-                </p>
-                <p>
-                    <Alert show-icon>仅限开发者加入，请勿讨论与技术无关的问题，比如发招聘信息等。</Alert>
-                </p>
-            </div>
-        </Modal>
-        <!-- todo 提问 -->
-        <a href="https://dev.iviewui.com/issues" target="_blank" class="ask-question" v-if="lang === 'zh-CN'" @click="handleClickAsk">
-            <Icon type="ios-help-circle" size="14" />
-            <p>提问</p>
-        </a>
     </div>
 </template>
 <script>
     import Navigate from './navigate.vue';
-    import navigate from '../config/navigate';
     import navMenu from './menu.vue';
-    import bus from './bus';
 
     export default {
         inject: ['app'],
@@ -245,22 +70,22 @@
             },
             updateActiveNav () {
                 const componentList = [
-                    '/docs/guide/install',
-                    '/docs/guide/install-en',
-                    '/docs/guide/start',
-                    '/docs/guide/start-en',
-                    '/docs/guide/i18n',
-                    '/docs/guide/i18n-en',
-                    '/docs/guide/theme',
-                    '/docs/guide/theme-en',
-                    '/docs/guide/iview-loader',
-                    '/docs/guide/iview-loader-en',
+                    '/guide/install',
+                    '/guide/install-en',
+                    '/guide/start',
+                    '/guide/start-en',
+                    '/guide/i18n',
+                    '/guide/i18n-en',
+                    '/guide/theme',
+                    '/guide/theme-en',
+                    '/guide/iview-loader',
+                    '/guide/iview-loader-en',
                     '/overview',
                     '/overview-en',
-                    '/docs/guide/update',
-                    '/docs/guide/update-en',
-                    '/docs/guide/global',
-                    '/docs/guide/global-en',
+                    '/guide/update',
+                    '/guide/update-en',
+                    '/guide/global',
+                    '/guide/global-en',
                 ];
 
                 const route = this.$route.path;
@@ -329,10 +154,6 @@
                     }
                 }
             }
-
-//            bus.$on('on-donate-show', () => {
-//                this.donate = true;
-//            })
         }
     }
 </script>

@@ -42,7 +42,7 @@
                 <li>To display the current progress of an operation flow.</li>
                 <li>To display the percentage of some indexes.</li>
             </ul>
-            <Alert show-icon style="margin-top: 16px" type="warning">Warning: If you don't use <router-link to="/docs/guide/iview-loader-en">iview-loader</router-link>, you have to use <code>i-circle</code> tag.</Alert>
+            <Alert show-icon style="margin-top: 16px" type="warning">Warning: If you don't use <router-link to="/guide/iview-loader-en">iview-loader</router-link>, you have to use <code>i-circle</code> tag.</Alert>
             <inAnchor title="Examples" h2></inAnchor>
             <Demo title="Basic Usage">
                 <div slot="demo">

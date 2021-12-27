@@ -4,7 +4,7 @@
             <h1>Switch 开关</h1>
             <inAnchor title="概述" h2></inAnchor>
             <p>在两种状态间切换时用到的开关选择器。</p>
-            <Alert show-icon style="margin-top: 16px" type="warning">注意：没有使用 <router-link to="/docs/guide/iview-loader">iview-loader</router-link> 时，必须使用 <code>i-switch</code> 标签。</Alert>
+            <Alert show-icon style="margin-top: 16px" type="warning">注意：没有使用 <router-link to="/guide/iview-loader">iview-loader</router-link> 时，必须使用 <code>i-switch</code> 标签。</Alert>
             <inAnchor title="代码示例" h2></inAnchor>
             <Demo title="基本">
                 <div slot="demo">

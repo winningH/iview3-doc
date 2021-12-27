@@ -68,7 +68,7 @@
                 <li>Progress: <code>i-progress</code></li>
                 <li>Time: <code>i-time</code></li>
             </ul>
-            <p>The following components, you must add a prefix <code>i-</code>, unless you use <router-link to="/docs/guide/iview-loader-en">iview-loader</router-link>:</p>
+            <p>The following components, you must add a prefix <code>i-</code>, unless you use <router-link to="/guide/iview-loader-en">iview-loader</router-link>:</p>
             <ul>
                 <li>Switch: <code>i-switch</code></li>
                 <li>Circle: <code>i-circle</code></li>

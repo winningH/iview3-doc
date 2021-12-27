@@ -154,7 +154,7 @@
                         <li>支持 TypeScript。<issue id="4406"></issue></li>
                         <li>增加 Vue CLI 3 插件。<a href="https://github.com/iview/vue-cli-plugin-iview" target="_blank">vue-cli-plugin-iview</a></li>
                         <li>文档增加 Nuxt.js 用法。<a href="https://dev.iviewui.com/articles/1024499044308881408" target="_blank">查看</a></li>
-                        <li>文档更新<strong>快速上手</strong>章节。<router-link to="/docs/guide/start">查看</router-link></li>
+                        <li>文档更新<strong>快速上手</strong>章节。<router-link to="/guide/start">查看</router-link></li>
                         <li>新增抽屉组件 Drawer。<router-link to="/components/drawer">查看</router-link> <issue id="4352"></issue></li>
                         <li>ColorPicker 新增属性 <code>editable</code>，支持输入色值。<issue id="4353"></issue></li>
                         <li>Tabs 新增属性 <code>beforeRemove</code>，返回 Promise 可中断关闭。</li>
@@ -390,7 +390,7 @@
         },
         methods: {
             handleBefore () {
-                window.open('http://v2.iviewui.com/docs/guide/update');
+                window.open('http://v2.iviewui.com/guide/update');
             },
             handleEgg () {
                 this.$Notice.info({

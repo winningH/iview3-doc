@@ -13,7 +13,6 @@
             <router-link to="/" class="wrapper-header-nav-logo">
                 <img src="../images/logo-doc.png">
             </router-link>
-            <ApplicationMenu></ApplicationMenu>
             <div class="wrapper-header-nav-search">
                 <i-select
                     ref="select"
@@ -29,64 +28,17 @@
                 </i-select>
             </div>
             <div class="wrapper-header-nav-list">
-                <Menu-item name="guide" :to="handleGoToMenu('/docs/guide/introduce')">
+                <Menu-item name="guide" :to="handleGoToMenu('/guide/introduce')">
                     <!--<Icon type="ios-navigate"></Icon>-->
                     {{ $t('index.guide') }}
                 </Menu-item>
-                <Menu-item name="component" :to="handleGoToMenu('/docs/guide/install')">
+                <Menu-item name="component" :to="handleGoToMenu('/guide/install')">
                     <!--<Icon type="ios-keypad"></Icon>-->
                     {{ $t('index.component') }}
                 </Menu-item>
-                <Menu-item name="live" v-if="lang === 'zh-CN'" :to="handleGoToMenu('/live')">
-                    <Badge :dot="liveDot" :offset="[20,0]">
-                        <!--<Icon type="ios-videocam"></Icon>-->
-                        {{ $t('index.live') }}
-                    </Badge>
-                </Menu-item>
-                <!--<Menu-item name="donate" :to="handleGoToMenu('/donate')">-->
-                    <!--<Icon type="ios-cash"></Icon>-->
-                    <!--{{ $t('index.donate') }}-->
-                <!--</Menu-item>-->
-                <!--<Menu-item name="practice" :to="handleGoToMenu('/docs/practice/case')">-->
-                    <!--<Icon type="ios-analytics"></Icon>-->
-                    <!--{{ $t('index.practice') }}-->
-                <!--</Menu-item>-->
-                <Menu-item name="dev" to="//dev.iviewui.com" target="_blank" v-if="lang === 'zh-CN'">
-                    <!--<Icon type="ios-construct" />-->
-                    社区
-                    <!--<Badge status="error" />-->
-                </Menu-item>
-                <Submenu name="ecosystem">
-                    <template slot="title">
-                        <!--<Icon type="ios-infinite"></Icon>-->
-                        {{ $t('index.ecosystem') }}
-                    </template>
-                    <Menu-item name="cli" :to="handleGoToMenu('/cli')">
-                        <!--<Icon type="settings"></Icon>-->
-                        {{ $t('index.cli') }}
-                    </Menu-item>
-                    <Menu-item name="iview-loader" :to="handleGoToMenu('/docs/guide/iview-loader')">
-                        <!--<Icon type="settings"></Icon>-->
-                        iView Loader
-                    </Menu-item>
-                    <Menu-item name="iview-admin">
-                        iView Admin
-                    </Menu-item>
-                    <Menu-item name="iview-area">
-                        iView Area
-                    </Menu-item>
-                    <Menu-item name="iview-editor">
-                        iView Editor
-                    </Menu-item>
-                </Submenu>
-                <Select size="small" value="3" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">
-                    <Option value="3">3.x</Option>
-                    <Option value="2">2.x</Option>
-                    <Option value="1">1.x</Option>
-                </Select>
+                
                 <ButtonGroup size="small">
                     <Button icon="logo-github" @click="handleGoToGitHub"></Button>
-                    <Button icon="logo-twitter" @click="handleGoToTwitter" v-if="lang !== 'zh-CN'"></Button>
                     <Button icon="ios-settings" @click="handleToggleSetting"></Button>
                     <Button @click="handleChangeLang" >
                         <template v-if="lang === 'zh-CN'">EN</template>
@@ -101,11 +53,9 @@
     import navigate from '../config/navigate';
     import Config from '../config/config';
     import bus from './bus';
-    import ApplicationMenu from './applications.vue';
 
     export default {
         inject: ['app'],
-        components: { ApplicationMenu },
         props: {
             activeKey: String
         },
@@ -158,7 +108,7 @@
                 } else if (type === 'live') {
                     this.$router.push('/live');
                 } else if (type === 'iview-loader') {
-                    this.$router.push('/docs/guide/iview-loader' + pathSuffix);
+                    this.$router.push('/guide/iview-loader' + pathSuffix);
                 } else if (type === 'iview-admin') {
                     window.open('https://github.com/iview/iview-admin');
                 } else if (type === 'iview-area') {
@@ -172,13 +122,13 @@
             },
             updateActiveNav () {
                 const componentList = [
-                    '/docs/guide/install',
-                    '/docs/guide/start',
-                    '/docs/guide/i18n',
-                    '/docs/guide/theme',
-                    '/docs/guide/iview-loader',
+                    '/guide/install',
+                    '/guide/start',
+                    '/guide/i18n',
+                    '/guide/theme',
+                    '/guide/iview-loader',
                     '/overview',
-                    '/docs/guide/update'
+                    '/guide/update'
                 ];
 
                 const route = this.$route.path;
@@ -206,13 +156,9 @@
                 }
             },
             handleGoToGitHub () {
-//                _hmt.push(['_trackEvent', 'menu-go-github', 'click']);
-                window.open('https://github.com/iview/iview');
+                window.open('https://github.com/winningH/iview3-doc');
             },
-            handleGoToTwitter () {
-//                _hmt.push(['_trackEvent', 'menu-go-twitter', 'click']);
-                window.open('https://twitter.com/iViewUI');
-            },
+            
             handleGoToMenu (name) {
                 if (this.lang === 'zh-CN') {
                     return name;

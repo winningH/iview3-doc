@@ -79,7 +79,7 @@
                     </p>
                     <ul>
                         <li>到 <a href="https://dev.iviewui.com/" target="_blank">iView Developer 开发者社区</a> 直接向作者提问</li>
-                        <li>仔细阅读 <a href="https://www.iviewui.com/docs/guide/install" target="_blank">文档</a></li>
+                        <li>仔细阅读 <a href="https://www.iviewui.com/guide/install" target="_blank">文档</a></li>
                         <li>在 <a href="https://stackoverflow.com/" target="_blank">StackOverflow</a> (英文) 或是 <a href="https://segmentfault.com/t/iview" target="_blank">SegmentFault</a>（中文）搜索和提问</li>
                     </ul>
                     <p>
@@ -250,7 +250,7 @@
                         For usage questions, please use the following resources:
                     </p>
                     <ul>
-                        <li>Read the <a href="https://www.iviewui.com/docs/guide/install-en" target="_blank">docs</a></li>
+                        <li>Read the <a href="https://www.iviewui.com/guide/install-en" target="_blank">docs</a></li>
                         <li>Look for / ask questions on <a href="https://stackoverflow.com/" target="_blank">StackOverflow</a></li>
                     </ul>
                     <p>

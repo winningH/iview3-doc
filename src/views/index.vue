@@ -25,10 +25,9 @@
                     <div class="index-content">{{ $t('index.title1') }}</div>
                     <div class="index-content">{{ $t('index.title2') }}</div>
                     <div class="index-actions">
-                        <Button class="index-btn" size="large" type="primary" shape="circle" :to="handleGoToMenu('/docs/guide/install')">{{ $t('index.start') }}</Button>
-                        <Button class="index-btn" size="large" type="primary" shape="circle" ghost icon="ios-construct" to="https://dev.iviewui.com" target="_blank" v-if="lang === 'zh-CN'">开发者社区</Button>
-                        <Button class="index-btn" size="large" type="primary" shape="circle" ghost icon="logo-github" to="https://github.com/iview/iview" target="_blank">GitHub</Button>
-                        <Button class="index-btn" size="large" type="primary" shape="circle" ghost to="https://gitee.com/icarusion/iview" target="_blank" v-if="lang === 'zh-CN'">
+                        <Button class="index-btn" size="large" type="primary" shape="circle" :to="handleGoToMenu('/guide/install')">{{ $t('index.start') }}</Button>
+                        <Button class="index-btn" size="large" type="primary" shape="circle" ghost icon="logo-github" to="https://github.com/winningH/iview3-doc" target="_blank">GitHub</Button>
+                        <Button class="index-btn" size="large" type="primary" shape="circle" ghost to="https://gitee.com/hwayn/iview3-doc" target="_blank" v-if="lang === 'zh-CN'">
                             <Icon custom="iconfont icon-mayun" size="12"></Icon>
                             码云
                         </Button>
@@ -40,12 +39,6 @@
             <img src="../images/bg-index-footer.png">
         </div>
         <div class="index-extra">
-            <Select size="small" value="3" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">
-                <Option value="3">3.x</Option>
-                <Option value="2">2.x</Option>
-                <Option value="1">1.x</Option>
-            </Select>
-
             <Button size="small" @click="handleChangeLang">
                 <template v-if="lang === 'zh-CN'">English</template>
                 <template v-else>中文</template>
@@ -78,14 +71,7 @@
                 const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
                 bus.$emit('on-change-lang', lang, '/');
             },
-            handleVersion (v) {
-                if (v == 1) {
-                    window.location.href = 'http://v1.iviewui.com';
-                }
-                if (v == 2) {
-                    window.location.href = 'http://v2.iviewui.com';
-                }
-            },
+            
             handleGoToMenu (name) {
                 if (this.lang === 'zh-CN') {
                     return name;

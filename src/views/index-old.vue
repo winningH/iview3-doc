@@ -22,8 +22,8 @@
                     </h1>
                     <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
-                        <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
-                        <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
+                        <router-link :to="'/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
+                        <router-link :to="'/guide/install' + suffix">{{ $t('index.component') }}</router-link>
                         <router-link :to="'/docs/practice/case' + suffix">{{ $t('index.practice') }}</router-link>
                         <router-link :to="'/overview' + suffix">{{ $t('index.overview') }}</router-link>
                         <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>

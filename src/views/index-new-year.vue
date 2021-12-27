@@ -92,7 +92,7 @@
                 }, 3000);
             },
             handleStart () {
-                this.$router.push('/docs/guide/install');
+                this.$router.push('/guide/install');
             },
             handleGithub () {
                 window.open('https://github.com/iview/iview');

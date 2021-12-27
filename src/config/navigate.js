@@ -5,59 +5,54 @@ const list = {
         {
             title: '介绍',
             titleEn: 'Introduction',
-            path: '/docs/guide/introduce'
+            path: '/guide/introduce'
         },
         {
             title: '实践',
             titleEn: 'Practice',
-            path: '/docs/guide/case'
+            path: '/guide/case'
         },
         {
             title: '设计原则',
             titleEn: 'Design Principles',
-            path: '/docs/guide/design'
+            path: '/guide/design'
         },
         {
             title: '布局',
             titleEn: 'Navigation Examples',
-            path: '/docs/guide/layout'
-        },
-        {
-            title: '参与贡献',
-            titleEn: 'Contributing Guide',
-            path: '/docs/guide/standard'
+            path: '/guide/layout'
         }
     ],
     beforeComponents: [
         {
             title: '安装',
             titleEn: 'Installation',
-            path: '/docs/guide/install'
+            path: '/guide/install'
         },
         {
             title: '快速上手',
             titleEn: 'Quick Start',
-            path: '/docs/guide/start'
+            path: '/guide/start'
         },
         {
             title: '全局配置',
             titleEn: 'Global Options',
-            path: '/docs/guide/global'
+            path: '/guide/global'
         },
         {
             title: '国际化',
             titleEn: 'Internationalization',
-            path: '/docs/guide/i18n'
+            path: '/guide/i18n'
         },
         {
             title: '定制主题',
             titleEn: 'Customize Theme',
-            path: '/docs/guide/theme'
+            path: '/guide/theme'
         },
         {
             title: 'iView Loader',
             titleEn: 'iView Loader',
-            path: '/docs/guide/iview-loader'
+            path: '/guide/iview-loader'
         },
         // {
         //     title: '概览',
@@ -65,15 +60,9 @@ const list = {
         //     path: '/overview'
         // },
         {
-            title: '在 Nuxt.js 中使用',
-            titleEn: 'Using in Nuxt.js',
-            path: 'https://dev.iviewui.com/articles/1024499044308881408',
-            target: '_blank'
-        },
-        {
             title: '更新日志',
             titleEn: 'Change Log',
-            path: '/docs/guide/update'
+            path: '/guide/update'
         }
     ],
     components: [

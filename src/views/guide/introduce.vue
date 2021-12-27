@@ -11,24 +11,7 @@
                 <li>事无巨细的文档</li>
                 <li>可自定义主题</li>
             </ul>
-            <inAnchor title="谁在使用" h2></inAnchor>
-            <ul>
-                <li><a href="http://www.talkingdata.com/" target="_blank">TalkingData</a></li>
-                <li><a href="http://www.alibaba.com/" target="_blank">阿里巴巴</a></li>
-                <li><a href="https://www.baidu.com/" target="_blank">百度</a></li>
-                <li><a href="https://www.tencent.com/" target="_blank">腾讯</a></li>
-                <li><a href="https://www.toutiao.com/" target="_blank">今日头条</a></li>
-                <li><a href="http://www.jd.com/" target="_blank">京东</a></li>
-                <li><a href="http://www.didichuxing.com/" target="_blank">滴滴出行</a></li>
-                <li><a href="http://www.meituan.com/" target="_blank">美团</a></li>
-                <li><a href="http://www.sina.com.cn/" target="_blank">新浪</a></li>
-                <li><a href="https://www.lenovo.com.cn/" target="_blank">联想</a></li>
-                <li><a href="http://www.iflytek.com/" target="_blank">科大讯飞</a></li>
-                <li><a href="https://www.ly.com/" target="_blank">同程艺龙</a></li>
-            </ul>
-            <blockquote>
-                如果你的公司和产品使用了iView，欢迎到 <a href="https://github.com/iview/iview/issues/2143" target="_blank">这里</a> 留言。
-            </blockquote>
+            
             <inAnchor title="安装" h2></inAnchor>
             <p>使用 npm</p>
             <i-code lang="auto" bg>{{ code.introduce.install }}</i-code>
@@ -61,9 +44,6 @@
                 </li>
                 <li>
                     <a href="http://webpack.github.io/" target="_blank">Webpack</a>
-                </li>
-                <li>
-                    <a href="https://git.oschina.net/icarusion/iview" target="_blank">码云</a>
                 </li>
             </ul>
         </article>
