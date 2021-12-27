@@ -10,7 +10,7 @@ var fs = require('fs');
 var CleanWebpackPlugin = require('clean-webpack-plugin')
 
 // config.output.publicPath = 'https://file.iviewui.com/dist/';
-config.output.publicPath = '/iview3-doc/';
+config.output.publicPath = '/iview3-doc/docs/';
 // config.output.publicPath = 'https://icarusion.gitee.io/iview/';
 // config.output.publicPath = '/dist/';
 config.output.filename = '[name].[hash].js';                 // 带hash值的入口js名称
@@ -18,7 +18,7 @@ config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路
 
 
 config.plugins = (config.plugins || []).concat([
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['docs']),
     new ExtractTextPlugin({
         filename: '[name].[hash].css',
         disable: false,
@@ -39,7 +39,7 @@ config.plugins = (config.plugins || []).concat([
         }
     }),
     new HtmlWebpackPlugin({
-        filename: 'index.html',
+        filename: '../index.html',
         template: './src/template/index.ejs',
         inject: false
     })
