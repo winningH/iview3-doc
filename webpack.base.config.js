@@ -1,7 +1,3 @@
-/**
- * Created by aresn on 16/7/5.
- */
-
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -17,7 +13,7 @@ module.exports = {
     },
     // 输出
     output: {
-        path: resolve(__dirname, './iview3-doc')
+        path: path.join(__dirname, '/dist')
     },
     // 加载器
     module: {
@@ -84,7 +80,7 @@ module.exports = {
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url-loader?limit=1024'
+                loader: "url-loader?limit=1024"
             },
             {
                 test: /\.(html|tpl)$/,
