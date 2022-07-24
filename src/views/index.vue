@@ -71,7 +71,7 @@
                 const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
                 bus.$emit('on-change-lang', lang, '/');
             },
-            
+
             handleGoToMenu (name) {
                 if (this.lang === 'zh-CN') {
                     return name;
