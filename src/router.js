@@ -14,7 +14,7 @@ const routes = [
     },
     component: resolve => require(['./views/index.vue'], resolve)
   },
-  
+
   {
     path: '/new-issue',
     meta: {
@@ -36,7 +36,7 @@ const routes = [
     },
     component: resolve => require(['./views/cli-en.vue'], resolve)
   },
-  
+
   {
     path: '/overview',
     meta: {
@@ -44,7 +44,7 @@ const routes = [
     },
     component: resolve => require(['./views/guide/overview.vue'], resolve)
   },
-  
+
   {
     path: '/overview-en',
     meta: {
@@ -204,8 +204,7 @@ const routes = [
     meta: {
       title: 'iView Loader'
     },
-    component: resolve =>
-      require(['./views/guide/iview-loader-en.vue'], resolve)
+    component: resolve => require(['./views/guide/iview-loader-en.vue'], resolve)
   },
   {
     path: '/guide/update',
@@ -345,8 +344,7 @@ const routes = [
     meta: {
       title: 'Checkbox'
     },
-    component: resolve =>
-      require(['./views/components/checkbox-en.vue'], resolve)
+    component: resolve => require(['./views/components/checkbox-en.vue'], resolve)
   },
   {
     path: '/components/switch',
@@ -409,32 +407,28 @@ const routes = [
     meta: {
       title: '日期选择器 DatePicker'
     },
-    component: resolve =>
-      require(['./views/components/date-picker.vue'], resolve)
+    component: resolve => require(['./views/components/date-picker.vue'], resolve)
   },
   {
     path: '/components/date-picker-en',
     meta: {
       title: 'DatePicker'
     },
-    component: resolve =>
-      require(['./views/components/date-picker-en.vue'], resolve)
+    component: resolve => require(['./views/components/date-picker-en.vue'], resolve)
   },
   {
     path: '/components/time-picker',
     meta: {
       title: '时间选择器 TimePicker'
     },
-    component: resolve =>
-      require(['./views/components/time-picker.vue'], resolve)
+    component: resolve => require(['./views/components/time-picker.vue'], resolve)
   },
   {
     path: '/components/time-picker-en',
     meta: {
       title: 'TimePicker'
     },
-    component: resolve =>
-      require(['./views/components/time-picker-en.vue'], resolve)
+    component: resolve => require(['./views/components/time-picker-en.vue'], resolve)
   },
   {
     path: '/components/cascader',
@@ -448,8 +442,7 @@ const routes = [
     meta: {
       title: 'Cascader'
     },
-    component: resolve =>
-      require(['./views/components/cascader-en.vue'], resolve)
+    component: resolve => require(['./views/components/cascader-en.vue'], resolve)
   },
   {
     path: '/components/transfer',
@@ -463,24 +456,21 @@ const routes = [
     meta: {
       title: 'Transfer'
     },
-    component: resolve =>
-      require(['./views/components/transfer-en.vue'], resolve)
+    component: resolve => require(['./views/components/transfer-en.vue'], resolve)
   },
   {
     path: '/components/input-number',
     meta: {
       title: '数字输入框 InputNumber'
     },
-    component: resolve =>
-      require(['./views/components/input-number.vue'], resolve)
+    component: resolve => require(['./views/components/input-number.vue'], resolve)
   },
   {
     path: '/components/input-number-en',
     meta: {
       title: 'InputNumber'
     },
-    component: resolve =>
-      require(['./views/components/input-number-en.vue'], resolve)
+    component: resolve => require(['./views/components/input-number-en.vue'], resolve)
   },
   {
     path: '/components/rate',
@@ -564,8 +554,7 @@ const routes = [
     meta: {
       title: 'Message'
     },
-    component: resolve =>
-      require(['./views/components/message-en.vue'], resolve)
+    component: resolve => require(['./views/components/message-en.vue'], resolve)
   },
   {
     path: '/components/notice',
@@ -607,8 +596,7 @@ const routes = [
     meta: {
       title: 'Progress'
     },
-    component: resolve =>
-      require(['./views/components/progress-en.vue'], resolve)
+    component: resolve => require(['./views/components/progress-en.vue'], resolve)
   },
   {
     path: '/components/badge',
@@ -636,8 +624,7 @@ const routes = [
     meta: {
       title: 'Collapse'
     },
-    component: resolve =>
-      require(['./views/components/collapse-en.vue'], resolve)
+    component: resolve => require(['./views/components/collapse-en.vue'], resolve)
   },
   {
     path: '/components/timeline',
@@ -651,8 +638,7 @@ const routes = [
     meta: {
       title: 'Timeline'
     },
-    component: resolve =>
-      require(['./views/components/timeline-en.vue'], resolve)
+    component: resolve => require(['./views/components/timeline-en.vue'], resolve)
   },
   {
     path: '/components/tag',
@@ -680,8 +666,7 @@ const routes = [
     meta: {
       title: 'Tooltip'
     },
-    component: resolve =>
-      require(['./views/components/tooltip-en.vue'], resolve)
+    component: resolve => require(['./views/components/tooltip-en.vue'], resolve)
   },
   {
     path: '/components/poptip',
@@ -709,8 +694,7 @@ const routes = [
     meta: {
       title: 'Carousel'
     },
-    component: resolve =>
-      require(['./views/components/carousel-en.vue'], resolve)
+    component: resolve => require(['./views/components/carousel-en.vue'], resolve)
   },
   {
     path: '/components/tree',
@@ -766,8 +750,7 @@ const routes = [
     meta: {
       title: 'Dropdown'
     },
-    component: resolve =>
-      require(['./views/components/dropdown-en.vue'], resolve)
+    component: resolve => require(['./views/components/dropdown-en.vue'], resolve)
   },
   {
     path: '/components/page',
@@ -788,16 +771,14 @@ const routes = [
     meta: {
       title: '面包屑 Breadcrumb'
     },
-    component: resolve =>
-      require(['./views/components/breadcrumb.vue'], resolve)
+    component: resolve => require(['./views/components/breadcrumb.vue'], resolve)
   },
   {
     path: '/components/breadcrumb-en',
     meta: {
       title: 'Breadcrumb'
     },
-    component: resolve =>
-      require(['./views/components/breadcrumb-en.vue'], resolve)
+    component: resolve => require(['./views/components/breadcrumb-en.vue'], resolve)
   },
   {
     path: '/components/steps',
@@ -818,16 +799,14 @@ const routes = [
     meta: {
       title: '加载进度条 LoadingBar'
     },
-    component: resolve =>
-      require(['./views/components/loading-bar.vue'], resolve)
+    component: resolve => require(['./views/components/loading-bar.vue'], resolve)
   },
   {
     path: '/components/loading-bar-en',
     meta: {
       title: 'LoadingBar'
     },
-    component: resolve =>
-      require(['./views/components/loading-bar-en.vue'], resolve)
+    component: resolve => require(['./views/components/loading-bar-en.vue'], resolve)
   },
   {
     path: '/components/circle',
@@ -869,8 +848,7 @@ const routes = [
     meta: {
       title: 'BackTop'
     },
-    component: resolve =>
-      require(['./views/components/back-top-en.vue'], resolve)
+    component: resolve => require(['./views/components/back-top-en.vue'], resolve)
   },
   {
     path: '/components/spin',
@@ -905,32 +883,28 @@ const routes = [
     meta: {
       title: '颜色选择器 ColorPicker'
     },
-    component: resolve =>
-      require(['./views/components/color-picker.vue'], resolve)
+    component: resolve => require(['./views/components/color-picker.vue'], resolve)
   },
   {
     path: '/components/color-picker-en',
     meta: {
       title: 'ColorPicker'
     },
-    component: resolve =>
-      require(['./views/components/color-picker-en.vue'], resolve)
+    component: resolve => require(['./views/components/color-picker-en.vue'], resolve)
   },
   {
     path: '/components/auto-complete',
     meta: {
       title: '自动完成 AutoComplete'
     },
-    component: resolve =>
-      require(['./views/components/auto-complete.vue'], resolve)
+    component: resolve => require(['./views/components/auto-complete.vue'], resolve)
   },
   {
     path: '/components/auto-complete-en',
     meta: {
       title: 'AutoComplete'
     },
-    component: resolve =>
-      require(['./views/components/auto-complete-en.vue'], resolve)
+    component: resolve => require(['./views/components/auto-complete-en.vue'], resolve)
   },
   {
     path: '/components/scroll',
@@ -1014,8 +988,7 @@ const routes = [
     meta: {
       title: 'Divider'
     },
-    component: resolve =>
-      require(['./views/components/divider-en.vue'], resolve)
+    component: resolve => require(['./views/components/divider-en.vue'], resolve)
   },
   {
     path: '/components/drawer',
@@ -1039,7 +1012,6 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.NODE_ENV !== 'production' ? '/' : '/iview3-doc/',
   routes
 })
 
